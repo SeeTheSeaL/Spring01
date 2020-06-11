@@ -1,0 +1,5 @@
+# Project exclude paths
+/section01/target/
+/section02/target/
+/section03/target/
+/section04-DI/target/

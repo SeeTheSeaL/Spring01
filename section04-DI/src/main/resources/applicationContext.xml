@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="student" class="com.Student">
+<!--         普通注入，使用value-->
+        <property name="name" value="yoghurt"/>
+<!--        bean注入，使用ref-->
+        <property name="address" ref="address"/>
+<!--        String[]注入-->
+        <property name="books">
+            <array>
+                <value>坏蛋是怎样炼成的</value>
+                <value>笑场</value>
+            </array>
+        </property>
+<!--        list注入-->
+        <property name="hobbies">
+            <list>
+                <value>听歌</value>
+                <value>健身</value>
+                <value>吃甜食</value>
+            </list>
+        </property>
+<!--        map注入-->
+        <property name="card">
+            <map>
+                <entry key="银行卡" value="62100000000000"/>
+                <entry key="饭卡" value="20200510003"/>
+            </map>
+        </property>
+<!--        set注入-->
+        <property name="games">
+            <set>
+                <value>LOL</value>
+                <value>DNF</value>
+            </set>
+        </property>
+<!--        properties注入-->
+        <property name="info">
+            <props>
+                <prop key="url">www.baidu.com</prop>
+                <prop key="driver">jdbc.driver</prop>
+                <prop key="username">小明</prop>
+                <prop key="password">123456</prop>
+            </props>
+        </property>
+<!--        null注入-->
+        <property name="wife">
+            <null/>
+        </property>
+    </bean>
+
+    <bean id="address" class="com.Address">
+
+    </bean>
+</beans>
